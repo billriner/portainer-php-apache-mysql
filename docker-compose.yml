@@ -11,7 +11,7 @@ services:
       - web:/var/www/html
 
   mysql:
-    container_name: mys
+    container_name: mysql
     build: ./mysql
     environment:
       - MYSQL_ROOT_PASSWORD=bEq!QgZ
@@ -19,6 +19,7 @@ services:
       - db:/var/lib/mysql
 
   php:
+    container_name: php
     build: ./php
     volumes:
       - web:/var/www/html
