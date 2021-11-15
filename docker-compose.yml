@@ -3,6 +3,7 @@ version: '3.2'
 services:
 
   apache:
+    container_name: apache
     build: ./apache
     ports:
      - "8080:80"
@@ -10,6 +11,7 @@ services:
       - web:/var/www/html
 
   mysql:
+    container_name: mys
     build: ./mysql
     environment:
       - MYSQL_ROOT_PASSWORD=bEq!QgZ
