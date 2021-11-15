@@ -3,21 +3,21 @@ version 3.2
 services:
 
   apache:
-    build: '/apache'
+    build: './apache'
     ports:
       - "8080:80"
     volumes:
       - web:/var/www/html
 
   mysql:
-    build: '/mysql'
+    build: './mysql'
     environment:
       - MYSQL_ROOT_PASSWORD=bEq!QgZ
     volumes:
       - db:/var/lib/mysql
 
   php:
-    build: '/php'
+    build: './php'
     volumes:
       - web:/var/www/html
 
